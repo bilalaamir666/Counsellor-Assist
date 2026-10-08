@@ -36,3 +36,21 @@ def delete_chunks_by_document(document_id: str):
     )
 
     return result.deleted_count
+
+
+def update_chunk_embedding(
+    chunk_id: str,
+    embedding: list[float]
+):
+    from bson import ObjectId
+
+    result = chunks_collection.update_one(
+        {"_id": ObjectId(chunk_id)},
+        {
+            "$set": {
+                "embedding": embedding
+            }
+        }
+    )
+
+    return result.modified_count
