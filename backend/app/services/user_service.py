@@ -1,5 +1,5 @@
 from app.database import db
-from app.models.user import User
+from app.models.user import User, UserRole
 from app.utils.security import hash_password
 
 
@@ -18,7 +18,7 @@ def create_user_with_password(
     name: str,
     email: str,
     password: str,
-    role: str = "counsellor"
+    role: UserRole = "counsellor"
 ):
     password_hash = hash_password(password)
 
