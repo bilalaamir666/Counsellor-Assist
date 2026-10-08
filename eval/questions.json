@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "What is the minimum IELTS score required for undergraduate admission at CBIU?",
+    "expected_document": "Crescent Bay International University - Admissions Guide 2027.pdf",
+    "expected_page": 3,
+    "answerable": true
+  },
+  {
+    "id": 2,
+    "question": "How much is the CBIU application fee for admission?",
+    "expected_document": "Crescent Bay International University - Tuition, Fees and Refund Policy 2027.pdf",
+    "expected_page": 1,
+    "answerable": true
+  },
+  {
+    "id": 3,
+    "question": "What is the minimum passport validity required for CBIU student visa sponsorship?",
+    "expected_document": "CBIU Student Visa Handbook 2027.pdf",
+    "expected_page": 1,
+    "answerable": true
+  },
+  {
+    "id": 4,
+    "question": "How much does a shared twin accommodation room cost per month?",
+    "expected_document": "Crescent Bay International University Student Accommodation FAQ 2027.pdf",
+    "expected_page": 1,
+    "answerable": true
+  },
+  {
+    "id": 5,
+    "question": "What is the minimum CGPA required for postgraduate admission?",
+    "expected_document": "Crescent Bay International University - Admissions Guide 2027.pdf",
+    "expected_page": 2,
+    "answerable": true
+  },
+  {
+    "id": 6,
+    "question": "How long does the standard CBIU entry permit processing take?",
+    "expected_document": "CBIU Student Visa Handbook 2027.pdf",
+    "expected_page": 2,
+    "answerable": true
+  },
+  {
+    "id": 7,
+    "question": "What is the refundable security deposit for university accommodation?",
+    "expected_document": "Crescent Bay International University Student Accommodation FAQ 2027.pdf",
+    "expected_page": 2,
+    "answerable": true
+  },
+  {
+    "id": 8,
+    "question": "What percentage of tuition is refunded if a student withdraws between August 1 and August 31?",
+    "expected_document": "Crescent Bay International University - Tuition, Fees and Refund Policy 2027.pdf",
+    "expected_page": 2,
+    "answerable": true
+  },
+  {
+    "id": 9,
+    "question": "How many recommendation letters are required for postgraduate admission?",
+    "expected_document": "Crescent Bay International University - Admissions Guide 2027.pdf",
+    "expected_page": 2,
+    "answerable": true
+  },
+  {
+    "id": 10,
+    "question": "How soon after arriving in the UAE must the student complete the medical examination?",
+    "expected_document": "CBIU Student Visa Handbook 2027.pdf",
+    "expected_page": 2,
+    "answerable": true
+  },
+  {
+    "id": 11,
+    "question": "What is the monthly cost of a Premium Single accommodation room?",
+    "expected_document": "Crescent Bay International University Student Accommodation FAQ 2027.pdf",
+    "expected_page": 1,
+    "answerable": true
+  },
+  {
+    "id": 12,
+    "question": "What is the annual tuition fee for the BS Artificial Intelligence program?",
+    "expected_document": "Crescent Bay International University - Tuition, Fees and Refund Policy 2027.pdf",
+    "expected_page": 1,
+    "answerable": true
+  },
+  {
+    "id": 13,
+    "question": "What is the average monthly salary of a CBIU graduate?",
+    "expected_document": null,
+    "expected_page": null,
+    "answerable": false
+  },
+  {
+    "id": 14,
+    "question": "Which airline provides discounted flights to CBIU international students?",
+    "expected_document": null,
+    "expected_page": null,
+    "answerable": false
+  },
+  {
+    "id": 15,
+    "question": "Does CBIU provide free airline tickets to international students?",
+    "expected_document": null,
+    "expected_page": null,
+    "answerable": false
+  }
+]

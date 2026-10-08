@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Chat from "./pages/Chat";
 import Enquiries from "./pages/Enquiries";
+import Documents from "./pages/Documents";
+import Conversations from "./pages/Conversations";
 
 const API_URL = "http://localhost:8000";
 
@@ -186,6 +188,9 @@ function App() {
       case "chat":
         return "AI Chat";
 
+      case "conversations":
+        return "Conversation History";
+
       case "enquiries":
         return "Student Enquiries";
 
@@ -201,6 +206,9 @@ function App() {
     switch (currentPage) {
       case "chat":
         return "Ask questions using the university reference documents";
+
+      case "conversations":
+        return "View previous AI counselling conversations";
 
       case "enquiries":
         return "Manage and track student counselling enquiries";
@@ -244,6 +252,16 @@ function App() {
           >
             <span>💬</span>
             Chat
+          </button>
+
+          <button
+            className={`nav-item ${
+              currentPage === "conversations" ? "active" : ""
+            }`}
+            onClick={() => setCurrentPage("conversations")}
+          >
+            <span>🕘</span>
+            Conversations
           </button>
 
           <button
@@ -303,20 +321,26 @@ function App() {
 
         {currentPage === "chat" ? (
           <Chat />
+        ) : currentPage === "conversations" ? (
+          <Conversations />
         ) : currentPage === "enquiries" ? (
           <Enquiries />
         ) : currentPage === "documents" ? (
-          <section className="counsellor-welcome">
-            <div className="welcome-card">
-              <div className="welcome-icon">📄</div>
+          role === "admin" ? (
+            <Documents />
+          ) : (
+            <section className="counsellor-welcome">
+              <div className="welcome-card">
+                <div className="welcome-icon">🔒</div>
 
-              <h2>Documents</h2>
+                <h2>Access Denied</h2>
 
-              <p>
-                The document management interface will be added next.
-              </p>
-            </div>
-          </section>
+                <p>
+                  Only administrators can manage reference documents.
+                </p>
+              </div>
+            </section>
+          )
         ) : role === "admin" ? (
           <section className="dashboard">
             {statsLoading && (
