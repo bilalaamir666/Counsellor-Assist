@@ -1,3 +1,7 @@
+from datetime import datetime, timezone
+
+from bson import ObjectId
+
 from app.database import db
 
 
@@ -19,19 +23,33 @@ def get_conversations_by_user(user_id: str):
 
 
 def get_conversation_by_id(conversation_id: str):
-    from bson import ObjectId
-
     return conversations_collection.find_one(
         {"_id": ObjectId(conversation_id)}
     )
 
 
-def update_conversation(conversation_id: str, update_data: dict):
-    from bson import ObjectId
-
+def add_message(conversation_id: str, message: dict):
     result = conversations_collection.update_one(
         {"_id": ObjectId(conversation_id)},
-        {"$set": update_data}
+        {
+            "$push": {
+                "messages": message
+            },
+            "$set": {
+                "updated_at": datetime.now(timezone.utc)
+            }
+        }
+    )
+
+    return result.modified_count
+
+
+def update_conversation(conversation_id: str, update_data: dict):
+    result = conversations_collection.update_one(
+        {"_id": ObjectId(conversation_id)},
+        {
+            "$set": update_data
+        }
     )
 
     return result.modified_count
