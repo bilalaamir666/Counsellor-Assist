@@ -5,6 +5,8 @@ from app.routes.auth import router as auth_router
 from app.routes.documents import router as documents_router
 from app.routes.chat import router as chat_router
 from app.routes.conversations import router as conversations_router
+from app.routes.enquiries import router as enquiries_router
+from app.routes.stats import router as stats_router
 
 
 app = FastAPI(
@@ -17,6 +19,8 @@ app.include_router(auth_router)
 app.include_router(documents_router)
 app.include_router(chat_router)
 app.include_router(conversations_router)
+app.include_router(enquiries_router)
+app.include_router(stats_router)
 
 
 @app.get("/")
